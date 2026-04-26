@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<style>
+:root {
+    --bg-top: #ffffff;
+    --bg-mid: #f8f8f8;
+    --bg-bottom: #f0f0f0;
+    --title-color: #0a0a0a;
+    --subtitle-color: #1a1a1a;
+    --text-color: #111111;
+    --panel-border: rgba(0, 0, 0, 0.2);
+    --panel-bg: rgba(0, 0, 0, 0.04);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 45%, var(--bg-bottom) 100%);
+    font-family: "Georgia", "Times New Roman", serif;
+    color: var(--text-color);
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 20% 15%, rgba(0, 0, 0, 0.06), transparent 45%),
+                radial-gradient(circle at 80% 85%, rgba(0, 0, 0, 0.04), transparent 40%);
+}
+
+.container {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    padding: 2.25rem 1.25rem;
+}
+
+.Title {
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0 0;
+    font-family: "Vladimir Script", cursive;
+    color: var(--title-color);
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+}
+
+.Title2 {
+    font-size: clamp(1.1rem, 2.9vw, 2rem);
+    font-weight: normal;
+    text-align: center;
+    margin-top: 0.9rem;
+    font-family: "Copperplate Gothic", "Times New Roman", serif;
+    color: var(--subtitle-color);
+    letter-spacing: 0.04em;
+}
+
+.portrait-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem auto 0.5rem;
+}
+
+.portrait {
+    width: min(92vw, 420px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    border: 1px solid var(--panel-border);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.eulogy {
+    font-size: clamp(1.65rem, 4.4vw, 2.2rem);
+    font-weight: bold;
+    text-align: center;
+    font-family: "Vladimir Script", cursive;
+    line-height: 1.36;
+    margin: 1.5rem auto;
+    max-width: 900px;
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(1px);
+    animation: fadeUp 0.85s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem 0.85rem;
+    }
+
+    .eulogy {
+        border-radius: 10px;
+    }
+}
+
+</style>
+
+<div class="container">
+    <h1 class="Title">
+        Praise Malcom X
+    </h1>
+
+    <h3 class="Title2">
+        A Eulogy for Malcom X: Written by Benjamin Abrons
+    </h3>
+
+    <div class="portrait-wrap">
+        <img class="portrait" src="4120.jpg" alt="Malcom X">
+        <img class="portrait" src="4119.jpg" alt="Malcom X">
+    </div>
+</div>
+
+<div class="container">
+    <p class="eulogy">
+        Malcom X was a powerful and influential figure in the civil rights movement. He was a passionate advocate for the rights of African Americans and a vocal critic of systemic racism. Malcom X's unwavering commitment to justice and equality inspired countless individuals to stand up against oppression and fight for their rights. His legacy continues to resonate today, reminding us of the importance of courage, resilience, and the pursuit of justice.
+    </p>
+
+    <p class="eulogy">
+        Malcolm X was more than a dog. He was a spirit of courage wrapped in fur, a loyal heart that kept beating even when life tried to break it.
+
+He knew hardship. He knew what it meant to be overlooked, mistreated, and pushed aside. He carried the weight of oppression, depression, and discrimination, yet he never let those things define him. Instead, he stood tall in his own way, refusing to bow to hate. Where others brought cruelty and division, Malcolm brought strength, dignity, and love.
+
+He fought for what was right. He reminded us that every life has worth, that every voice deserves to be heard, and that loyalty to your own should never be ashamed. He defended his people with a brave heart and a fearless soul, and he did it all while still giving comfort to those he loved.
+
+Malcolm X was not just part of this family, he was part of a bigger story: one of resistance, resilience, and hope. His life was not easy, but it was powerful. His memory is not quiet, it is a call to stand up, stay strong, and love without fear.
+
+Rest well, Malcolm X.
+    </p>
+
+    <p class="eulogy">
+        You were brave.
+    </p>
+    <p class="eulogy">
+        You were loyal.
+    </p>
+    <p class="eulogy">
+        You were loved.
+    </p>
+    <p class="eulogy">
+        rest in peace, Malcolm X.
+    </p>
+
+</div>
+
+</html>
